@@ -47,7 +47,7 @@ public:
     ~DiamondCompany()
     {
 
-        cout << "company memory reset\n";
+        cout << "company object memory reset\n";
     }
 };
 
