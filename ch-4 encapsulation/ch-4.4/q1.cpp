@@ -64,7 +64,7 @@ public:
         return Name;
     };
 
-    void display()const
+    void display() const
     {
 
         cout << "Name :" << Name << "Roll no : " << Roll << "Gpa" << Gpa << endl;
@@ -109,6 +109,25 @@ public:
             }
         }
     }
+
+    void searchByRoll(int roll) const
+    {
+
+        for (int i = 0; i < students.size(); i++)
+        {
+
+            if (students[i].GetRoll() == roll)
+            {
+
+                cout << "student found" << endl;
+
+                students[i].display();
+
+                return;
+            }
+        }
+        cout << "student not found with this id" << endl;
+    }
 };
 
 int main()
@@ -125,6 +144,8 @@ int main()
     manager.addStudent(s3);
 
     manager.displayAllData();
+
+    manager.searchByRoll(10);
 
     return 0;
 }
